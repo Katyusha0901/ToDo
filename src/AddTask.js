@@ -15,7 +15,7 @@ export default function AddTask({ onAddTask }) {
           onAddTask(text);
         }}
       >
-        Add
+        Add Task
       </button>
     </>
   );
