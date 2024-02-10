@@ -13,7 +13,7 @@ export default function TaskList({ tasks }) {
 }
 
 function Task({ task }) {
-  const [isEditing, setIsEditing] = useState(false);
+  //   const [isEditing, setIsEditing] = useState(false);
   return (
     <label>
       <input type="checkbox" checked={task.done} />
