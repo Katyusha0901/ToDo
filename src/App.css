@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+}
+
+.addTask {
+  display: flex;
+  flex-direction: row;
+}
+
+button {
+}
+
+li {
+  list-style-type: none;
+}
+
+.taskItem {
+  display: flex;
+  flex-direction: row;
+}

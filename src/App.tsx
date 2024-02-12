@@ -18,9 +18,11 @@ export default function App() {
 
   return (
     <>
-      <h1>To-Do List</h1>
-      <AddTask onAddTask={handleAddTask} />
-      <TaskList tasks={initialTasks}/>
+      <div className="app">
+        <h1 className="title">To-Do List</h1>
+        <AddTask onAddTask={handleAddTask} />
+        <TaskList tasks={initialTasks} />
+      </div>
     </>
   );
 }
