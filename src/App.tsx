@@ -1,6 +1,7 @@
 import React from "react";
 import AddTask from "./AddTask";
-import TaskList from "./TaskList";
+import TaskList from "./Task/TaskList";
+import DeleteTask from "./DeleteTask";
 import { useState } from "react";
 
 export default function App() {
@@ -8,20 +9,44 @@ export default function App() {
     { id: 0, text: "sport", done: true },
   ]);
   const [nextId, setNextId] = useState(1);
-  console.log(initialTasks);
+
   function handleAddTask(text: string) {
     setInitialTasks([...initialTasks, { id: nextId, text: text, done: false }]);
     setNextId(nextId + 1);
-    console.log(initialTasks);
-    console.log(nextId);
+  }
+
+  function handleChangeTask(task: { id: number; text: string; done: boolean }) {
+    setInitialTasks(
+      initialTasks.map((t) => {
+        if (t.id === task.id) {
+          return task;
+        } else {
+          return t;
+        }
+      })
+    );
+  }
+
+  function handleDeleteTask(taskId: number) {
+    setInitialTasks(initialTasks.filter((t) => t.id !== taskId));
+  }
+
+  function handleDeleteAll(tasks: []) {
+    const newArray = initialTasks.slice();
+    newArray.splice(0, newArray.length);
+    setInitialTasks(newArray);
   }
 
   return (
     <>
       <div className="app">
-        <h1 className="title">To-Do List</h1>
+        <DeleteTask tasks={initialTasks} onDeleteAll={handleDeleteAll} />
         <AddTask onAddTask={handleAddTask} />
-        <TaskList tasks={initialTasks} />
+        <TaskList
+          tasks={initialTasks}
+          onChangeTask={handleChangeTask}
+          onDeleteTask={handleDeleteTask}
+        />
       </div>
     </>
   );
