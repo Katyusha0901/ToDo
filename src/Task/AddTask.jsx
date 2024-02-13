@@ -8,12 +8,12 @@ export default function AddTask({ onAddTask }) {
       <div className="addTask">
         <input
           placeholder="Add task"
-          className="inputTask"
+          className="addTask__inputTask"
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
         <button
-          className="buttonAdd"
+          className="button addTask__buttonAdd"
           onClick={() => {
             if (text.length >= 1) {
               setText("");

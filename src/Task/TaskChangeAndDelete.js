@@ -7,7 +7,7 @@ export default function TaskChangeAndDelete({ task, onChange, onDelete }) {
     taskContent = (
       <>
         <input
-          className="inputTaskText"
+          className="taskItem__inputTaskText"
           value={task.text}
           onChange={(e) => {
             onChange({
@@ -16,7 +16,7 @@ export default function TaskChangeAndDelete({ task, onChange, onDelete }) {
             });
           }}
         />
-        <button onClick={() => setIsEditing(false)}>Save</button>
+        <button className="button taskItem__button" onClick={() => setIsEditing(false)}>Save</button>
       </>
     );
   } else {
@@ -44,7 +44,7 @@ export default function TaskChangeAndDelete({ task, onChange, onDelete }) {
   return (
     <label className="taskItem">
       {taskContent}
-      <button className="buttonDelete" onClick={() => onDelete(task.id)}>
+      <button className="button taskItem__buttonDelete" onClick={() => onDelete(task.id)}>
         Delete
       </button>
     </label>

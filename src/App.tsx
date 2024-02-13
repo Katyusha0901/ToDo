@@ -1,7 +1,7 @@
 import React from "react";
-import AddTask from "./AddTask";
+import AddTask from "./Task/AddTask";
 import TaskList from "./Task/TaskList";
-import DeleteTask from "./Task/DeleteTask";
+import DeleteAllTask from "./Task/DeleteAllTask";
 import { useState } from "react";
 
 export default function App() {
@@ -40,7 +40,7 @@ export default function App() {
   return (
     <>
       <div className="app">
-        <DeleteTask tasks={initialTasks} onDeleteAll={handleDeleteAll} />
+        <DeleteAllTask tasks={initialTasks} onDeleteAll={handleDeleteAll} />
         <AddTask onAddTask={handleAddTask} />
         <TaskList
           tasks={initialTasks}

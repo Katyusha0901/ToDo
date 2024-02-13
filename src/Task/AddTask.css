@@ -1,0 +1,28 @@
+.addTask {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  input {
+    width: 350px;
+    outline: none;
+    padding-left: 20px;
+    font-style: italic;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    box-shadow: 0 0 5px rgb(161, 161, 161);
+    border-radius: 10px 0 0 10px;
+    cursor: pointer;
+  }
+  
+  .addTask__inputTask {
+    height: 50px;
+  }
+  
+  .addTask__buttonAdd {
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px rgb(161, 161, 161);
+    border-radius: 0px 10px 10px 0px;
+  }
+  
