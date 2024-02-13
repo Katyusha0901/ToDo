@@ -1,7 +1,7 @@
 import React from "react";
 import AddTask from "./AddTask";
 import TaskList from "./Task/TaskList";
-import DeleteTask from "./DeleteTask";
+import DeleteTask from "./Task/DeleteTask";
 import { useState } from "react";
 
 export default function App() {
