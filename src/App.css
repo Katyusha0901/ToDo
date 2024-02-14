@@ -6,12 +6,24 @@
   color: rgb(94, 89, 98);
 }
 
-.app {
+.allApp {
+  display: flex;
+  justify-content: center;
+}
+
+.allApp__app {
   background-color: rgb(255, 255, 255);
   display: flex;
-  align-items: center;
+  position: absolute;
   justify-content: center;
-  padding-top: 70px;
+  align-items: center;
   flex-direction: column;
-  width: 600px;
+  margin-top: 150px;
+  width: 435px;
+}
+
+@media screen and (max-width: 437px) {
+.allApp__app {
+  width: 90vw;
+}
 }

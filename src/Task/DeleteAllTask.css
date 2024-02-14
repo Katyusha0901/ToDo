@@ -7,12 +7,14 @@
   box-shadow: 5px #a1a1a1;
   border-radius: 10px 10px 10px 10px;
   height: 35px;
+  width: 88px;
+  font-size: 13px;
   padding: 5px;
   margin-bottom: 10px;
+  word-wrap: break-word;
 }
 
 .buttonDeleteAll {
-  height: 50px;
   background-color: rgb(255, 255, 255);
   border: none;
   padding: 10px;
@@ -27,4 +29,12 @@
 
 .buttonDeleteAll:active {
   box-shadow: 0 0 5px rgb(64, 63, 63);
+}
+
+@media screen and (max-width: 437px) {
+.deleteAll {
+  width: 15vw;
+  font-size: 3vw;
+  padding: 1px;
+}
 }

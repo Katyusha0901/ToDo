@@ -1,7 +1,7 @@
 import React from "react";
-import AddTask from "./Task/AddTask";
-import TaskList from "./Task/TaskList";
-import DeleteAllTask from "./Task/DeleteAllTask";
+import { AddTask } from "./Task/AddTask";
+import { TaskList } from "./Task/TaskList";
+import { DeleteAllTask } from "./Task/DeleteAllTask";
 import { useState } from "react";
 
 export default function App() {
@@ -38,16 +38,16 @@ export default function App() {
   }
 
   return (
-    <>
-      <div className="app">
-        <DeleteAllTask tasks={initialTasks} onDeleteAll={handleDeleteAll} />
-        <AddTask onAddTask={handleAddTask} />
-        <TaskList
-          tasks={initialTasks}
-          onChangeTask={handleChangeTask}
-          onDeleteTask={handleDeleteTask}
-        />
-      </div>
-    </>
+    <div className="allApp">
+    <div className="allApp__app">
+      <DeleteAllTask tasks={initialTasks} onDeleteAll={handleDeleteAll} />
+      <AddTask onAddTask={handleAddTask} />
+      <TaskList
+        tasks={initialTasks}
+        onChangeTask={handleChangeTask}
+        onDeleteTask={handleDeleteTask}
+      />
+    </div>
+    </div>
   );
 }

@@ -1,6 +1,9 @@
 import { useState } from "react";
+interface Props {
+  onAddTask: Function;
+}
 
-export default function AddTask({ onAddTask }) {
+export const AddTask: React.FC<Props> = ({ onAddTask }) => {
   const [text, setText] = useState("");
 
   return (
@@ -8,9 +11,15 @@ export default function AddTask({ onAddTask }) {
       <div className="addTask">
         <input
           placeholder="Add task"
-          className="addTask__inputTask"
+          className="input addTask__inputTask"
           value={text}
           onChange={(e) => setText(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              setText("");
+              onAddTask(text);
+            }
+          }}
         />
         <button
           className="button addTask__buttonAdd"
@@ -26,4 +35,4 @@ export default function AddTask({ onAddTask }) {
       </div>
     </>
   );
-}
+};

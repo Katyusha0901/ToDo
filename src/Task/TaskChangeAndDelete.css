@@ -1,6 +1,60 @@
-li {
-  list-style-type: none;
+.taskItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 20px 0 20px;
+    flex-direction: row;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px rgb(161, 161, 161);
+    border-radius: 10px 10px 10px 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    width: 435px;
+  }
+
+.taskItem__inputTaskText {
+  height: 50px;
+  border: none;
+  box-shadow: none;
+  font-size: 13px;
 }
+
+.taskItem__inputTask:focus {
+  box-shadow: 0 0 5px rgb(64, 63, 63);
+}
+
+.button {
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px;
+    box-shadow: 0 0 5px rgb(161, 161, 161);
+    border-radius: 0px 10px 10px 0px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    box-shadow: 0 0 5px rgb(111, 110, 110);
+  }
+  
+  .button:active {
+    box-shadow: 0 0 5px rgb(64, 63, 63);
+  }
+  
+
+.taskItem__button {
+  display: flex;
+  justify-self: flex-end;
+  align-items: center;
+  box-shadow: 5px rgb(161, 161, 161);
+  border-radius: 10px;
+  width: 65px;
+  margin: 0 0 0 10px;
+  height: 30px;
+  font-size: 13px;
+}
+
+
 
 .checkbox {
   width: 20px;
@@ -62,63 +116,53 @@ li {
   transition: 0.1s;
 }
 
-.button {
-  height: 50px;
-  background-color: rgb(255, 255, 255);
-  border: none;
-  padding: 10px;
-  box-shadow: 0 0 5px rgb(161, 161, 161);
-  border-radius: 0px 10px 10px 0px;
-  cursor: pointer;
-}
-
-.button:hover {
-  box-shadow: 0 0 5px rgb(111, 110, 110);
-}
-
-.button:active {
-  box-shadow: 0 0 5px rgb(64, 63, 63);
-}
-
-.taskItem__inputTaskText {
-  height: 50px;
-  border: none;
-  box-shadow: none;
-}
-
-.taskItem__inputTask:focus {
-  box-shadow: 0 0 5px rgb(64, 63, 63);
-}
-
-.taskItem__buttonDelete {
-  display: flex;
-  justify-self: flex-end;
-  align-items: center;
-  box-shadow: 5px rgb(161, 161, 161);
-  border-radius: 10px;
-
-  margin-left: 10px;
-  height: 30px;
-}
-
-.taskItem__saveButton{
-
-}
-
-.taskItem {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 0 20px 0 20px;
-  flex-direction: row;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0 0 5px rgb(161, 161, 161);
-  border-radius: 10px 10px 10px 10px;
-  cursor: pointer;
-  margin-bottom: 10px;
-  max-width: 770px;
-}
 
 .pTask {
   word-break: break-word;
+  margin-left: 30px;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 437px) {
+  .taskItem {
+    width: 90vw;
+  }
+
+.taskItem__inputTaskText {
+    font-size: 3vw;
+}
+.taskItem__button {
+    margin: 0 3vw 0 0;
+}
+  .checkbox {
+    width: 4vw;
+    height: 4vw;
+  }
+
+  .checkbox::before {
+    width: 4vw;
+    height: 4vw;
+  }
+  .checkbox__checkmark {
+    bottom: 3vw;
+  }
+
+  .checkbox__input:checked + .checkbox__checkmark {
+    font-size: 6vw;
+  }
+
+  .taskItem__button {
+    width: 15vw;
+    font-size: 3vw;
+    height: 10vw;
+  }
+
+  .button {
+    padding: 3vw;
+  }
+
+  .pTask {
+    font-size: 3vw;
+    margin-left: 3vw;
+  }
 }

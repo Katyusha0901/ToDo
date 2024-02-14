@@ -1,4 +1,10 @@
-export default function DeleteAll({ tasks, onDeleteAll }) {
+interface Props {
+  tasks: { id: number; text: string; done: boolean }[];
+  onDeleteAll: Function;
+}
+
+
+export const DeleteAllTask: React.FC<Props> = ({tasks, onDeleteAll })=> {
     return (
       <>
         <div className="DeleteButton">

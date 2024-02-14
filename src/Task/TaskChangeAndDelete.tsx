@@ -1,13 +1,24 @@
 import { useState } from "react";
 
-export default function TaskChangeAndDelete({ task, onChange, onDelete }) {
+interface Props {
+  task: { id: number; text: string; done: boolean };
+  onChange: Function;
+  onDelete: Function;
+}
+
+export const TaskChangeAndDelete: React.FC<Props> = ({
+  task,
+  onChange,
+  onDelete,
+}) => {
   const [isEditing, setIsEditing] = useState(false);
+
   let taskContent;
   if (isEditing) {
     taskContent = (
       <>
         <input
-          className="taskItem__inputTaskText"
+          className="input taskItem__inputTaskText"
           value={task.text}
           onChange={(e) => {
             onChange({
@@ -16,7 +27,12 @@ export default function TaskChangeAndDelete({ task, onChange, onDelete }) {
             });
           }}
         />
-        <button className="button taskItem__button" onClick={() => setIsEditing(false)}>Save</button>
+        <button
+          className="button taskItem__button"
+          onClick={() => setIsEditing(false)}
+        >
+          Save
+        </button>
       </>
     );
   } else {
@@ -24,15 +40,16 @@ export default function TaskChangeAndDelete({ task, onChange, onDelete }) {
       <>
         <label className="checkbox">
           <input
-            className="checkbox__input"
+            className="input checkbox__input"
             type="checkbox"
             checked={task.done}
             onChange={(e) => {
+              console.log("checked");
               onChange({ ...task, done: e.target.checked });
             }}
           />
           <span className="checkbox__checkmark">✔</span>
-        </label>{" "}
+        </label>
         <p className="pTask" onClick={() => setIsEditing(true)}>
           {" "}
           {task.text}{" "}
@@ -42,11 +59,14 @@ export default function TaskChangeAndDelete({ task, onChange, onDelete }) {
   }
 
   return (
-    <label className="taskItem">
+    <div className="taskItem">
       {taskContent}
-      <button className="button taskItem__buttonDelete" onClick={() => onDelete(task.id)}>
+      <button
+        className="button taskItem__button"
+        onClick={() => onDelete(task.id)}
+      >
         Delete
       </button>
-    </label>
+    </div>
   );
-}
+};
