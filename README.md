@@ -1,8 +1,8 @@
 #To-DO
+Elegant React todo app. Try it [here](https://katyusha0901.github.io/todo/)
 
 
 ## Getting Started with Create React App
-Elegant React todo app. Try it [here](https://katyusha0901.github.io/todo/)
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
