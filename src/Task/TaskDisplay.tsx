@@ -1,4 +1,4 @@
-import "./TaskChangeAndDelete.css";
+import "./Task.css";
 
 interface Props {
   task: { id: number; text: string; done: boolean; isEditing: boolean };
@@ -13,11 +13,11 @@ export const TaskNotEditing: React.FC<Props> = ({
 }) => {
   return (
     <>
-      <li className="allApp__li" key={task.id}>
-        <div className="taskItem">
+      <li className="app__item-content" key={task.id}>
+        <div className="app__task-item">
           <label className="checkbox">
             <input
-              className="input checkbox__input"
+              className=" checkbox__input"
               type="checkbox"
               checked={task.done}
               onChange={(e) => {
@@ -27,7 +27,7 @@ export const TaskNotEditing: React.FC<Props> = ({
             <span className="checkbox__checkmark">✔</span>
           </label>
           <p
-            className="taskItem__pTask"
+            className="task-item__p-task"
             onClick={() => {
               onChange({ ...task, isEditing: true });
             }}
@@ -36,7 +36,7 @@ export const TaskNotEditing: React.FC<Props> = ({
             {task.text}{" "}
           </p>
           <button
-            className="button taskItem__button"
+            className="task-item__button"
             onClick={() => onDelete(task.id)}
           >
             Delete

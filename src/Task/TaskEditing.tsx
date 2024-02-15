@@ -1,5 +1,4 @@
-import "./TaskChangeAndDelete.css";
-import { TaskNotEditing } from "./TaskNotEditing";
+import "./Task.css";
 
 interface Props {
   task: { id: number; text: string; done: boolean };
@@ -9,10 +8,10 @@ interface Props {
 export const TaskEditing: React.FC<Props> = ({ task, onChange }) => {
   return (
     <>
-      <div className="taskItem">
+      <div className="app__task-item">
         <div></div>
         <input
-          className="input taskItem__inputTaskText"
+          className=" task-item__input-task-text"
           value={task.text}
           onChange={(e) => {
             onChange({
@@ -22,7 +21,7 @@ export const TaskEditing: React.FC<Props> = ({ task, onChange }) => {
           }}
         />
         <button
-          className="button taskItem__button"
+          className="button task-item__button"
           onClick={() => {
             onChange({ ...task, isEditing: false });
           }}

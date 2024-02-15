@@ -1,9 +1,11 @@
-.addTask {
+.add-task {
   display: flex;
   flex-direction: row;
 }
 
-.input {
+.add-task__input-task {
+  height: 50px;
+  font-size: 13px;
   width: 347px;
   outline: none;
   padding-left: 20px;
@@ -15,30 +17,28 @@
   cursor: pointer;
 }
 
-.addTask__inputTask {
-  height: 50px;
-  font-size: 13px;
-}
-
-.addTask__buttonAdd {
+.add-task__button-add {
   height: 50px;
   width: 85px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 0 5px rgb(161, 161, 161);
   border-radius: 0px 10px 10px 0px;
   font-size: 13px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 437px) {
-  .input {
+  .add-task__input-task {
     width: 75vw;
   }
 
-  .addTask__inputTask {
+  .add-task__input-task {
     font-size: 3vw;
   }
 
-  .addTask__buttonAdd {
+  .add-task__button-add {
     width: 15vw;
     font-size: 3vw;
   }

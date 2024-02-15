@@ -1,9 +1,11 @@
-.taskItem {
-  /* display: flex;
-    align-items: center; */
-  /* justify-content: flex-start; */
+.app__item-content {
+  list-style-type: none;
+}
+
+.app__task-item {
+  height: 50px;
   display: grid;
-  grid-template-columns: 20px 300px 100px;
+  grid-template-columns: 30px 300px 100px;
   padding: 0 20px 0 20px;
   flex-direction: row;
   background-color: rgb(255, 255, 255);
@@ -14,36 +16,25 @@
   width: 435px;
 }
 
-.taskItem__inputTaskText {
+.task-item__input-task-text {
   height: 50px;
   border: none;
   box-shadow: none;
   font-size: 13px;
-}
-
-.taskItem__inputTask:focus {
-  box-shadow: 0 0 5px rgb(64, 63, 63);
-}
-
-.button {
-  height: 50px;
+  width: 347px;
+  outline: none;
+  padding-left: 20px;
+  font-style: italic;
   background-color: rgb(255, 255, 255);
-  border: none;
-  padding: 10px;
-  box-shadow: 0 0 5px rgb(161, 161, 161);
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 10px 0 0 10px;
   cursor: pointer;
 }
 
-.button:hover {
-  box-shadow: 0 0 5px rgb(111, 110, 110);
-}
-
-.button:active {
+.task-item__input-task:focus {
   box-shadow: 0 0 5px rgb(64, 63, 63);
 }
 
-.taskItem__button {
+.task-item__button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,6 +45,19 @@
   margin: 0 0 0 10px;
   height: 30px;
   font-size: 13px;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px;
+  box-shadow: 0 0 5px rgb(161, 161, 161);
+  cursor: pointer;
+}
+
+.task-item__button:hover {
+  box-shadow: 0 0 5px rgb(111, 110, 110);
+}
+
+.task-item__button:active {
+  box-shadow: 0 0 5px rgb(64, 63, 63);
 }
 
 .checkbox {
@@ -94,6 +98,14 @@
   right: 10px;
   width: 10px;
   opacity: 0;
+  outline: none;
+  padding-left: 20px;
+  font-style: italic;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  box-shadow: 0 0 5px rgb(161, 161, 161);
+  border-radius: 10px 0 0 10px;
+  cursor: pointer;
 }
 
 .checkbox__checkmark {
@@ -120,23 +132,27 @@
   transition: 0.1s;
 }
 
-.taskItem__pTask {
+.taskItem__p-task {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
   word-break: break-word;
   margin-left: 30px;
   font-size: 16px;
 }
 
 @media screen and (max-width: 437px) {
-  .taskItem {
+  .app__task-item {
+    grid-template-columns: 10vw 50vw 30vw;
+
     width: 90vw;
   }
 
-  .taskItem__inputTaskText {
+  .task-item__input-task-text {
     font-size: 3vw;
   }
-  .taskItem__button {
-    margin: 0 3vw 0 0;
-  }
+
   .checkbox {
     width: 4vw;
     height: 4vw;
@@ -147,25 +163,24 @@
     height: 4vw;
   }
   .checkbox__checkmark {
-    bottom: 3vw;
+    bottom: 3.8vw;
+    left: -1px;
   }
 
   .checkbox__input:checked + .checkbox__checkmark {
     font-size: 6vw;
   }
 
-  .taskItem__button {
+  .task-item__button {
+    margin: 0 3vw 0 0;
+
     width: 15vw;
     font-size: 3vw;
     height: 10vw;
-  }
-
-  .button {
     padding: 3vw;
   }
 
-  .taskItem__pTask {
-    font-size: 3vw;
+  .task-item__p-task {
     margin-left: 3vw;
   }
 }

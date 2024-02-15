@@ -1,8 +1,7 @@
 import React from "react";
+import { useRef } from "react";
 import { AddTask } from "./AddTask/AddTask";
-// import { TaskChangeAndDelete } from "./Task/TaskChangeAndDelete";
-// import { TaskDelete } from "./Task/TaskDelete";
-import { TaskNotEditing } from "./Task/TaskNotEditing";
+import { TaskNotEditing } from "./Task/TaskDisplay";
 import { TaskEditing } from "./Task/TaskEditing";
 import { DeleteAllTask } from "./DeleteAll/DeleteAllTask";
 import "./App.css";
@@ -16,17 +15,17 @@ export interface Task {
 }
 
 export default function App() {
+  const nextId = useRef(1);
   const [tasks, settasks] = useState([
     { id: 0, text: "sport", done: true, isEditing: false },
   ]);
-  const [nextId, setNextId] = useState(1);
 
   function addTask(text: string) {
     settasks([
       ...tasks,
-      { id: nextId, text: text, done: false, isEditing: false },
+      { id: nextId.current, text: text, done: false, isEditing: false },
     ]);
-    setNextId(nextId + 1);
+    nextId.current = nextId.current + 1;
   }
 
   function changeTask(task: Task) {
@@ -45,18 +44,12 @@ export default function App() {
     settasks([]);
   }
 
-  // interface Props {
-  //   tasks: { id: number; text: string; done: boolean }[];
-  //   onChangeTask: Function;
-  //   onDeleteTask: Function;
-  // }
-
   return (
-    <div className="allApp">
-      <div className="allApp__app">
+    <div className="app">
+      <div className="app__app-content">
         <DeleteAllTask tasks={tasks} onDeleteAll={deleteAll} />
         <AddTask onAddTask={addTask} />
-        <ul className="allApp__taskList">
+        <ul className="app__task-list">
           {tasks
             .sort((a, b) => {
               return b.done === a.done ? 0 : b.done ? -1 : 1;

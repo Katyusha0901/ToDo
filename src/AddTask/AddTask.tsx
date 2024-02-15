@@ -10,10 +10,10 @@ export const AddTask: React.FC<Props> = ({ onAddTask }) => {
 
   return (
     <>
-      <div className="addTask">
+      <div className="add-task">
         <input
           placeholder="Add task"
-          className="input addTask__inputTask"
+          className=" add-task__input-task"
           value={text}
           onChange={(e) => setText(e.target.value)}
           onKeyDown={(e) => {
@@ -24,7 +24,7 @@ export const AddTask: React.FC<Props> = ({ onAddTask }) => {
           }}
         />
         <button
-          className="button addTask__buttonAdd"
+          className=" add-task__button-add"
           onClick={() => {
             if (text.length >= 1) {
               setText("");
