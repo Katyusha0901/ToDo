@@ -10,12 +10,12 @@ export default function App() {
   const [tasks, settasks] = useState([{ id: 0, text: "sport", done: true }]);
   const [nextId, setNextId] = useState(1);
 
-  function handleAddTask(text: string) {
+  function addTask(text: string) {
     settasks([...tasks, { id: nextId, text: text, done: false }]);
     setNextId(nextId + 1);
   }
 
-  function handleChangeTask(task: { id: number; text: string; done: boolean }) {
+  function changeTask(task: { id: number; text: string; done: boolean }) {
     settasks(
       tasks.map((t) => {
         if (t.id === task.id) {
@@ -27,11 +27,11 @@ export default function App() {
     );
   }
 
-  function handleDeleteTask(taskId: number) {
+  function deleteTask(taskId: number) {
     settasks(tasks.filter((t) => t.id !== taskId));
   }
 
-  function handleDeleteAll(tasks: []) {
+  function deleteAll(tasks: []) {
     const newArray = tasks.slice();
     newArray.splice(0, newArray.length);
     settasks(newArray);
@@ -40,12 +40,12 @@ export default function App() {
   return (
     <div className="allApp">
       <div className="allApp__app">
-        <DeleteAllTask tasks={tasks} onDeleteAll={handleDeleteAll} />
-        <AddTask onAddTask={handleAddTask} />
+        <DeleteAllTask tasks={tasks} onDeleteAll={deleteAll} />
+        <AddTask onAddTask={addTask} />
         <TaskList
           tasks={tasks}
-          onChangeTask={handleChangeTask}
-          onDeleteTask={handleDeleteTask}
+          onChangeTask={changeTask}
+          onDeleteTask={deleteTask}
         />
       </div>
     </div>
