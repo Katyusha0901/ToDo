@@ -3,7 +3,6 @@ import { AddTask } from "./Task/AddTask";
 import { TaskList } from "./Task/TaskList";
 import { DeleteAllTask } from "./Task/DeleteAllTask";
 import "./App.css";
-
 import { useState } from "react";
 
 export default function App() {
@@ -18,11 +17,7 @@ export default function App() {
   function changeTask(task: { id: number; text: string; done: boolean }) {
     settasks(
       tasks.map((t) => {
-        if (t.id === task.id) {
-          return task;
-        } else {
-          return t;
-        }
+        return t.id === task.id ? task : t;
       })
     );
   }
