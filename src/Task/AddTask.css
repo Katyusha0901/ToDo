@@ -1,34 +1,33 @@
 .addTask {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .input {
-    width: 347px;
-    outline: none;
-    padding-left: 20px;
-    font-style: italic;
-    background-color: rgb(255, 255, 255);
-    border: none;
-    box-shadow: 0 0 5px rgb(161, 161, 161);
-    border-radius: 10px 0 0 10px;
-    cursor: pointer;
-  }
-  
-  .addTask__inputTask {
-    height: 50px;
-    font-size: 13px;
-  }
-  
-  .addTask__buttonAdd {
-    height: 50px;
-    width: 85px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 0 5px rgb(161, 161, 161);
-    border-radius: 0px 10px 10px 0px;
-    font-size: 13px;
-  }
-  
+  display: flex;
+  flex-direction: row;
+}
+
+.input {
+  width: 347px;
+  outline: none;
+  padding-left: 20px;
+  font-style: italic;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  box-shadow: 0 0 5px rgb(161, 161, 161);
+  border-radius: 10px 0 0 10px;
+  cursor: pointer;
+}
+
+.addTask__inputTask {
+  height: 50px;
+  font-size: 13px;
+}
+
+.addTask__buttonAdd {
+  height: 50px;
+  width: 85px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 5px rgb(161, 161, 161);
+  border-radius: 0px 10px 10px 0px;
+  font-size: 13px;
+}
 
 @media screen and (max-width: 437px) {
   .input {

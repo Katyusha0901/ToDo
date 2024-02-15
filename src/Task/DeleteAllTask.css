@@ -32,9 +32,9 @@
 }
 
 @media screen and (max-width: 437px) {
-.deleteAll {
-  width: 15vw;
-  font-size: 3vw;
-  padding: 1px;
-}
+  .deleteAll {
+    width: 15vw;
+    font-size: 3vw;
+    padding: 1px;
+  }
 }

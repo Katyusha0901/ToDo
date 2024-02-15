@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./TaskChangeAndDelete.css";
 
 interface Props {
   task: { id: number; text: string; done: boolean };

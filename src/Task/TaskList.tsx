@@ -1,4 +1,5 @@
 import { TaskChangeAndDelete } from "./TaskChangeAndDelete";
+import "./TaskList.css";
 
 interface Props {
   tasks: { id: number; text: string; done: boolean }[];

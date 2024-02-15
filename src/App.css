@@ -23,7 +23,7 @@
 }
 
 @media screen and (max-width: 437px) {
-.allApp__app {
-  width: 90vw;
-}
+  .allApp__app {
+    width: 90vw;
+  }
 }

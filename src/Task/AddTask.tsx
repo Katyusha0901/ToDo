@@ -1,4 +1,6 @@
 import { useState } from "react";
+import "./AddTask.css";
+
 interface Props {
   onAddTask: Function;
 }
