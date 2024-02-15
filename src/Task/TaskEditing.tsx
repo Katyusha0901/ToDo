@@ -1,8 +1,9 @@
 import "./Task.css";
+import { Task } from "../App";
 
 interface Props {
-  task: { id: number; text: string; done: boolean };
-  onChange: Function;
+  task: Task;
+  onChange: (task: Task) => void;
 }
 
 export const TaskEditing: React.FC<Props> = ({ task, onChange }) => {

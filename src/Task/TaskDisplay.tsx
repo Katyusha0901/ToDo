@@ -1,9 +1,12 @@
+import React from "react";
+import { Task } from "../App";
+
 import "./Task.css";
 
 interface Props {
-  task: { id: number; text: string; done: boolean; isEditing: boolean };
-  onChange: Function;
-  onDelete: Function;
+  task: Task;
+  onChange: (task: Task) => void;
+  onDelete: (x: number) => void;
 }
 
 export const TaskNotEditing: React.FC<Props> = ({

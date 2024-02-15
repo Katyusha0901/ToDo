@@ -16,7 +16,7 @@ export interface Task {
 
 export default function App() {
   const nextId = useRef(1);
-  const [tasks, settasks] = useState([
+  const [tasks, settasks] = useState<Task[]>([
     { id: 0, text: "sport", done: true, isEditing: false },
   ]);
 

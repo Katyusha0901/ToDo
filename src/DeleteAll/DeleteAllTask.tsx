@@ -1,8 +1,9 @@
 import "./DeleteAllTask.css";
+import { Task } from "../App";
 
 interface Props {
-  tasks: { id: number; text: string; done: boolean }[];
-  onDeleteAll: Function;
+  tasks: Task[];
+  onDeleteAll: (x: Task[]) => void;
 }
 
 export const DeleteAllTask: React.FC<Props> = ({ tasks, onDeleteAll }) => {
