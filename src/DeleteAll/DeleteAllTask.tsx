@@ -8,10 +8,10 @@ interface Props {
 export const DeleteAllTask: React.FC<Props> = ({ tasks, onDeleteAll }) => {
   return (
     <>
-      <div className="DeleteButton">
+      <div className="allApp__DeleteButton">
         <button
           onClick={() => onDeleteAll(tasks)}
-          className="buttonDeleteAll deleteAll"
+          className="allApp__buttonDeleteAll allApp__deleteAll"
         >
           Delete All
         </button>

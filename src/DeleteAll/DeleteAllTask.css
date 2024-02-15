@@ -1,9 +1,9 @@
-.DeleteButton {
+.allApp__DeleteButton {
   display: flex;
   align-self: flex-start;
 }
 
-.deleteAll {
+.allApp__deleteAll {
   box-shadow: 5px #a1a1a1;
   border-radius: 10px 10px 10px 10px;
   height: 35px;
@@ -14,7 +14,7 @@
   word-wrap: break-word;
 }
 
-.buttonDeleteAll {
+.allApp__buttonDeleteAll {
   background-color: rgb(255, 255, 255);
   border: none;
   padding: 10px;
@@ -23,16 +23,16 @@
   cursor: pointer;
 }
 
-.buttonDeleteAll:hover {
+.allApp__buttonDeleteAll:hover {
   box-shadow: 0 0 5px rgb(111, 110, 110);
 }
 
-.buttonDeleteAll:active {
+.allApp__buttonDeleteAll:active {
   box-shadow: 0 0 5px rgb(64, 63, 63);
 }
 
 @media screen and (max-width: 437px) {
-  .deleteAll {
+  .allApp__deleteAll {
     width: 15vw;
     font-size: 3vw;
     padding: 1px;
