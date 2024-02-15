@@ -26,10 +26,8 @@ export default function App() {
     settasks(tasks.filter((t) => t.id !== taskId));
   }
 
-  function deleteAll(tasks: []) {
-    const newArray = tasks.slice();
-    newArray.splice(0, newArray.length);
-    settasks(newArray);
+  function deleteAll() {
+    settasks([]);
   }
 
   return (
