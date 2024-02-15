@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/todo/static/css/main.02abf554.css",
-    "main.js": "/todo/static/js/main.beedbce9.js",
+    "main.css": "/todo/static/css/main.6c431a6b.css",
+    "main.js": "/todo/static/js/main.8ddea5b7.js",
     "static/media/LibreBaskerville-Italic.ttf": "/todo/static/media/LibreBaskerville-Italic.3cbbed9ea170d3b9e426.ttf",
     "static/media/LibreBaskerville-Bold.ttf": "/todo/static/media/LibreBaskerville-Bold.6e5f70731aeed7c6e895.ttf",
     "static/media/LibreBaskerville-Regular.ttf": "/todo/static/media/LibreBaskerville-Regular.715e9cea90f54d5a4093.ttf",
     "index.html": "/todo/index.html",
-    "main.02abf554.css.map": "/todo/static/css/main.02abf554.css.map",
-    "main.beedbce9.js.map": "/todo/static/js/main.beedbce9.js.map"
+    "main.6c431a6b.css.map": "/todo/static/css/main.6c431a6b.css.map",
+    "main.8ddea5b7.js.map": "/todo/static/js/main.8ddea5b7.js.map"
   },
   "entrypoints": [
-    "static/css/main.02abf554.css",
-    "static/js/main.beedbce9.js"
+    "static/css/main.6c431a6b.css",
+    "static/js/main.8ddea5b7.js"
   ]
 }
