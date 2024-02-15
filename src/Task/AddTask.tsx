@@ -15,7 +15,7 @@ export const AddTask: React.FC<Props> = ({ onAddTask }) => {
           value={text}
           onChange={(e) => setText(e.target.value)}
           onKeyDown={(e) => {
-            if (e.key === "Enter") {
+            if (e.key === "Enter" && text.length >= 1) {
               setText("");
               onAddTask(text);
             }

@@ -1,4 +1,4 @@
-import {TaskChangeAndDelete} from "./TaskChangeAndDelete";
+import { TaskChangeAndDelete } from "./TaskChangeAndDelete";
 
 interface Props {
   tasks: { id: number; text: string; done: boolean }[];
@@ -13,15 +13,19 @@ export const TaskList: React.FC<Props> = ({
 }) => {
   return (
     <ul className="allApp__taskList">
-      {tasks.map((task) => (
-        <li className="li" key={task.id}>
-          <TaskChangeAndDelete
-            task={task}
-            onChange={onChangeTask}
-            onDelete={onDeleteTask}
-          />
-        </li>
-      ))}
+      {tasks
+        .sort((a, b) => {
+          return b.done === a.done ? 0 : b.done ? -1 : 1;
+        })
+        .map((task) => (
+          <li className="li" key={task.id}>
+            <TaskChangeAndDelete
+              task={task}
+              onChange={onChangeTask}
+              onDelete={onDeleteTask}
+            />
+          </li>
+        ))}
     </ul>
   );
 };

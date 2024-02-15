@@ -17,6 +17,7 @@ export const TaskChangeAndDelete: React.FC<Props> = ({
   if (isEditing) {
     taskContent = (
       <>
+        <div></div>
         <input
           className="input taskItem__inputTaskText"
           value={task.text}
@@ -31,7 +32,7 @@ export const TaskChangeAndDelete: React.FC<Props> = ({
           className="button taskItem__button"
           onClick={() => setIsEditing(false)}
         >
-          Save
+          ✔
         </button>
       </>
     );
@@ -44,29 +45,24 @@ export const TaskChangeAndDelete: React.FC<Props> = ({
             type="checkbox"
             checked={task.done}
             onChange={(e) => {
-              console.log("checked");
               onChange({ ...task, done: e.target.checked });
             }}
           />
           <span className="checkbox__checkmark">✔</span>
         </label>
-        <p className="pTask" onClick={() => setIsEditing(true)}>
+        <p className="taskItem__pTask" onClick={() => setIsEditing(true)}>
           {" "}
           {task.text}{" "}
         </p>
+        <button
+          className="button taskItem__button"
+          onClick={() => onDelete(task.id)}
+        >
+          Delete
+        </button>
       </>
     );
   }
 
-  return (
-    <div className="taskItem">
-      {taskContent}
-      <button
-        className="button taskItem__button"
-        onClick={() => onDelete(task.id)}
-      >
-        Delete
-      </button>
-    </div>
-  );
+  return <div className="taskItem">{taskContent}</div>;
 };
