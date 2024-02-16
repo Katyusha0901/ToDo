@@ -1,9 +1,9 @@
-.app__delete-button {
+.delete-button {
   display: flex;
   align-self: flex-start;
 }
 
-.app__delete-all {
+.delete-button__delete-all {
   box-shadow: 5px #a1a1a1;
   border-radius: 10px 10px 10px 10px;
   height: 35px;
@@ -14,7 +14,7 @@
   word-wrap: break-word;
 }
 
-.app__button-delete-all {
+.delete-button__button-delete-all {
   background-color: rgb(255, 255, 255);
   border: none;
   padding: 10px;
@@ -23,16 +23,16 @@
   cursor: pointer;
 }
 
-.app__button-delete-all:hover {
+.delete-button__button-delete-all:hover {
   box-shadow: 0 0 5px rgb(111, 110, 110);
 }
 
-.app__button-delete-all:active {
+.delete-button__button-delete-all:active {
   box-shadow: 0 0 5px rgb(64, 63, 63);
 }
 
 @media screen and (max-width: 437px) {
-  .app__delete-all {
+  .delete-button__delete-all {
     width: 15vw;
     font-size: 3vw;
     padding: 1px;
