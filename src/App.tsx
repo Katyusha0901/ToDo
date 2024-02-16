@@ -29,11 +29,7 @@ export default function App() {
   }
 
   function changeTask(task: Task) {
-    setTasks(
-      tasks.map((t) => {
-        return t.id === task.id ? task : t;
-      })
-    );
+    setTasks(tasks.map((t) => (t.id === task.id ? task : t)));
   }
 
   function deleteTask(taskId: number) {
