@@ -18,7 +18,7 @@
   box-shadow: none;
   font-size: 16px;
   outline: none;
-  padding-left: 20px;
+  padding-left: 30px;
   font-style: normal;
   background-color: rgb(255, 255, 255);
   border-radius: 10px 0 0 10px;
@@ -59,7 +59,7 @@
   }
 
   .task-item__input-task-text {
-    font-size: 3vw;
+    padding-left: 5vw;
   }
 
   .task-item__button {
