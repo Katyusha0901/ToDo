@@ -1,6 +1,7 @@
 .delete-button {
   display: flex;
   align-self: flex-start;
+  margin-left: 2px;
 }
 
 .delete-button__delete-all {

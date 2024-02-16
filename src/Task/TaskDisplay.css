@@ -1,11 +1,7 @@
 .task-display {
-  min-height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* justify-content: space-between; */
-  /* display: grid;
-  grid-template-columns: 20px 300px 100px; */
   padding: 0 20px 0 20px;
   flex-direction: row;
   background-color: rgb(255, 255, 255);
@@ -13,7 +9,7 @@
   border-radius: 10px 10px 10px 10px;
   cursor: pointer;
   margin-bottom: 10px;
-  width: 435px;
+  width: 432px;
 }
 
 .task-display__input-task-text {
@@ -24,7 +20,6 @@
   width: 347px;
   outline: none;
   padding-left: 20px;
-  font-style: italic;
   background-color: rgb(255, 255, 255);
   border-radius: 10px 0 0 10px;
   cursor: pointer;
@@ -39,7 +34,6 @@
   align-items: center;
   justify-content: center;
   align-self: center;
-  box-shadow: 5px rgb(161, 161, 161);
   border-radius: 10px;
   width: 65px;
   margin: 0 0 0 10px;
@@ -50,10 +44,6 @@
   padding: 10px;
   box-shadow: 0 0 5px rgb(161, 161, 161);
   cursor: pointer;
-}
-
-.task-display__button:hover {
-  box-shadow: 0 0 5px rgb(111, 110, 110);
 }
 
 .task-display__button:active {
@@ -71,6 +61,7 @@
   flex-grow: 0;
   border: 1px solid #adb5bd;
   border-radius: 3px;
+  font-size: 20px;
 }
 
 .task-display__p-task {
@@ -85,9 +76,7 @@
 }
 
 @media screen and (max-width: 437px) {
-  .task-display__task-item {
-    grid-template-columns: 10vw 50vw 30vw;
-
+  .task-display {
     width: 90vw;
   }
 
@@ -98,19 +87,7 @@
   .task-display__checkbox {
     width: 4vw;
     height: 4vw;
-  }
-
-  .task-display__checkbox::before {
-    width: 4vw;
-    height: 4vw;
-  }
-  .task-display__checkbox-checkmark {
-    bottom: 3.8vw;
-    left: -1px;
-  }
-
-  .task-display__checkbox-input:checked + .task-display__checkbox-checkmark {
-    font-size: 6vw;
+    font-size: 5vw;
   }
 
   .task-display__button {

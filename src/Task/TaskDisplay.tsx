@@ -13,11 +13,11 @@ export const TaskDisplay: React.FC<Props> = ({ task, onChange, onDelete }) => (
   <div className="task-display">
     <div
       className="task-display__checkbox"
-      onClick={(e) => {
-        onChange({ ...task, isCheked: false });
+      onClick={() => {
+        onChange({ ...task, isCheked: !task.isCheked });
       }}
     >
-      ✔
+      {task.isCheked ? "✔" : null}
     </div>
 
     <p
