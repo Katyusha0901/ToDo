@@ -53,6 +53,7 @@ export default function App() {
             .map((task) =>
               task.isEditing === false ? (
                 <TaskNotEditing
+                  key={task.id}
                   task={task}
                   onChange={changeTask}
                   onDelete={deleteTask}
