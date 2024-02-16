@@ -8,7 +8,7 @@ interface Props {
 
 export const TaskEditing: React.FC<Props> = ({ task, onChange }) => (
   <div className="task-editing">
-    <div></div>
+    {/* <div></div> */}
     <input
       className="task-editing__input-task-text"
       value={task.text}

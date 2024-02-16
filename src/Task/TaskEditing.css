@@ -1,7 +1,8 @@
 .task-editing {
   height: 50px;
-  display: grid;
-  grid-template-columns: 20px 300px 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   padding: 0 20px 0 20px;
   flex-direction: row;
   background-color: rgb(255, 255, 255);
@@ -18,7 +19,6 @@
   box-shadow: none;
   font-size: 16px;
   outline: none;
-  padding-left: 30px;
   font-style: normal;
   background-color: rgb(255, 255, 255);
   border-radius: 10px 0 0 10px;
@@ -53,13 +53,11 @@
 
 @media screen and (max-width: 437px) {
   .task-editing {
-    grid-template-columns: 10vw 50vw 15vw;
-
     width: 90vw;
   }
 
   .task-editing__input-task-text {
-    padding-left: 5vw;
+    width: 50vw;
   }
 
   .task-editing__button {
