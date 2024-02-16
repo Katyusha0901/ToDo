@@ -1,4 +1,4 @@
-import "./Task.css";
+import "./TaskEditing.css";
 import { Task } from "../App";
 
 interface Props {
@@ -9,10 +9,10 @@ interface Props {
 export const TaskEditing: React.FC<Props> = ({ task, onChange }) => {
   return (
     <>
-      <div className="app__task-item">
+      <div className="task-item">
         <div></div>
         <input
-          className=" task-item__input-task-text"
+          className="task-item__input-task-text"
           value={task.text}
           onChange={(e) => {
             onChange({
@@ -20,9 +20,14 @@ export const TaskEditing: React.FC<Props> = ({ task, onChange }) => {
               text: e.target.value,
             });
           }}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              onChange({ ...task, isEditing: false });
+            }
+          }}
         />
         <button
-          className="button task-item__button"
+          className="task-item__button"
           onClick={() => {
             onChange({ ...task, isEditing: false });
           }}

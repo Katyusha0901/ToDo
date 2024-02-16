@@ -1,0 +1,72 @@
+.task-item {
+  height: 50px;
+  display: grid;
+  grid-template-columns: 20px 300px 100px;
+  padding: 0 20px 0 20px;
+  flex-direction: row;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 5px rgb(161, 161, 161);
+  border-radius: 10px 10px 10px 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  width: 435px;
+}
+
+.task-item__input-task-text {
+  height: 50px;
+  border: none;
+  box-shadow: none;
+  font-size: 16px;
+  outline: none;
+  padding-left: 20px;
+  font-style: normal;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px 0 0 10px;
+  cursor: pointer;
+}
+
+.task-item__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  box-shadow: 5px rgb(161, 161, 161);
+  border-radius: 10px;
+  width: 65px;
+  margin: 0 0 0 10px;
+  height: 30px;
+  font-size: 13px;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px;
+  box-shadow: 0 0 5px rgb(161, 161, 161);
+  cursor: pointer;
+}
+
+.task-item__button:hover {
+  box-shadow: 0 0 5px rgb(111, 110, 110);
+}
+
+.task-item__button:active {
+  box-shadow: 0 0 5px rgb(64, 63, 63);
+}
+
+@media screen and (max-width: 437px) {
+  .task-item {
+    grid-template-columns: 10vw 50vw 15vw;
+
+    width: 90vw;
+  }
+
+  .task-item__input-task-text {
+    font-size: 3vw;
+  }
+
+  .task-item__button {
+    margin: 0 3vw 0 0;
+    width: 15vw;
+    font-size: 4vw;
+    height: 9vw;
+    padding: 3vw;
+  }
+}

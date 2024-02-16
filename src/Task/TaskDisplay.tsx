@@ -1,7 +1,6 @@
 import React from "react";
 import { Task } from "../App";
-
-import "./Task.css";
+import "./TaskDisplay.css";
 
 interface Props {
   task: Task;
@@ -16,21 +15,21 @@ export const TaskNotEditing: React.FC<Props> = ({
 }) => {
   return (
     <>
-      <li className="app__item-content" key={task.id}>
-        <div className="app__task-item">
-          <label className="checkbox">
+      <li className="item-content" key={task.id}>
+        <div className="item-content__task-item">
+          <label className="item-content__checkbox">
             <input
-              className=" checkbox__input"
+              className="item-content__checkbox-input"
               type="checkbox"
               checked={task.done}
               onChange={(e) => {
                 onChange({ ...task, done: e.target.checked });
               }}
             />
-            <span className="checkbox__checkmark">✔</span>
+            <span className="item-content__checkbox-checkmark">✔</span>
           </label>
           <p
-            className="task-item__p-task"
+            className="item-content__p-task"
             onClick={() => {
               onChange({ ...task, isEditing: true });
             }}
@@ -39,7 +38,7 @@ export const TaskNotEditing: React.FC<Props> = ({
             {task.text}{" "}
           </p>
           <button
-            className="task-item__button"
+            className="item-content__button"
             onClick={() => onDelete(task.id)}
           >
             Delete
