@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./AddTask.css";
 
 interface Props {
-  onAddTask: (x: string) => void;
+  onAddTask: (text: string) => void;
 }
 
 export const AddTask: React.FC<Props> = ({ onAddTask }) => {

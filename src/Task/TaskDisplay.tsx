@@ -5,7 +5,7 @@ import "./TaskDisplay.css";
 interface Props {
   task: Task;
   onChange: (task: Task) => void;
-  onDelete: (x: number) => void;
+  onDelete: (number: number) => void;
 }
 
 export const TaskNotEditing: React.FC<Props> = ({

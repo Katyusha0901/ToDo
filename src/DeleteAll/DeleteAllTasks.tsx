@@ -3,7 +3,7 @@ import { Task } from "../App";
 
 interface Props {
   tasks: Task[];
-  onDeleteAll: (value: Task[]) => void;
+  onDeleteAll: (tasks: Task[]) => void;
 }
 
 export const DeleteAllTasks: React.FC<Props> = ({ tasks, onDeleteAll }) => (
