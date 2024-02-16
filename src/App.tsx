@@ -16,12 +16,12 @@ export interface Task {
 
 export default function App() {
   const nextId = useRef(1);
-  const [tasks, settasks] = useState<Task[]>([
+  const [tasks, setTasks] = useState<Task[]>([
     { id: 0, text: "sport", done: true, isEditing: false },
   ]);
 
   function addTask(text: string) {
-    settasks([
+    setTasks([
       ...tasks,
       { id: nextId.current, text: text, done: false, isEditing: false },
     ]);
@@ -29,7 +29,7 @@ export default function App() {
   }
 
   function changeTask(task: Task) {
-    settasks(
+    setTasks(
       tasks.map((t) => {
         return t.id === task.id ? task : t;
       })
@@ -37,11 +37,11 @@ export default function App() {
   }
 
   function deleteTask(taskId: number) {
-    settasks(tasks.filter((t) => t.id !== taskId));
+    setTasks(tasks.filter((t) => t.id !== taskId));
   }
 
   function deleteAll() {
-    settasks([]);
+    setTasks([]);
   }
 
   return (
