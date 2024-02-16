@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { AddTask } from "./AddTask/AddTask";
 import { TaskNotEditing } from "./Task/TaskDisplay";
 import { TaskEditing } from "./Task/TaskEditing";
-import { DeleteAllTask } from "./DeleteAll/DeleteAllTask";
+import { DeleteAllTasks } from "./DeleteAll/DeleteAllTasks";
 import "./App.css";
 import { useState } from "react";
 
@@ -43,7 +43,7 @@ export default function App() {
   return (
     <div className="app">
       <div className="app__app-content">
-        <DeleteAllTask tasks={tasks} onDeleteAll={deleteAll} />
+        <DeleteAllTasks tasks={tasks} onDeleteAll={deleteAll} />
         <AddTask onAddTask={addTask} />
         <ul className="app__task-list">
           {tasks

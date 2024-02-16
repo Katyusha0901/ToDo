@@ -1,4 +1,4 @@
-import "./DeleteAllTask.css";
+import "./DeleteAllTasks.css";
 import { Task } from "../App";
 
 interface Props {
@@ -6,7 +6,7 @@ interface Props {
   onDeleteAll: (x: Task[]) => void;
 }
 
-export const DeleteAllTask: React.FC<Props> = ({ tasks, onDeleteAll }) => {
+export const DeleteAllTasks: React.FC<Props> = ({ tasks, onDeleteAll }) => {
   return (
     <>
       <div className="app__delete-button">
