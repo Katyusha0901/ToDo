@@ -1,5 +1,6 @@
 import React from "react";
 import { Task } from "../App";
+import { useState } from "react";
 import "./TaskDisplay.css";
 
 interface Props {
@@ -9,18 +10,16 @@ interface Props {
 }
 
 export const TaskDisplay: React.FC<Props> = ({ task, onChange, onDelete }) => (
-  <div className="task-display__task-item">
-    <label className="task-display__checkbox">
-      <input
-        className="task-display__checkbox-input"
-        type="checkbox"
-        checked={task.done}
-        onChange={(e) => {
-          onChange({ ...task, done: e.target.checked });
-        }}
-      />
-      <span className="task-display__checkbox-checkmark">✔</span>
-    </label>
+  <div className="task-display">
+    <div
+      className="task-display__checkbox"
+      onClick={(e) => {
+        onChange({ ...task, isCheked: false });
+      }}
+    >
+      ✔
+    </div>
+
     <p
       className="task-display__p-task"
       onClick={() => {

@@ -12,18 +12,19 @@ export interface Task {
   text: string;
   done: boolean;
   isEditing: boolean;
+  isCheked: boolean;
 }
 
 export default function App() {
   const nextId = useRef(1);
   const [tasks, setTasks] = useState<Task[]>([
-    { id: 0, text: "sport", done: true, isEditing: false },
+    { id: 0, text: "sport", done: true, isEditing: false, isCheked:true },
   ]);
 
   function addTask(text: string) {
     setTasks([
       ...tasks,
-      { id: nextId.current, text: text, done: false, isEditing: false },
+      { id: nextId.current, text: text, done: false, isEditing: false, isCheked:true },
     ]);
     nextId.current = nextId.current + 1;
   }
