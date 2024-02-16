@@ -7,10 +7,10 @@ interface Props {
 }
 
 export const TaskEditing: React.FC<Props> = ({ task, onChange }) => (
-  <div className="task-item">
+  <div className="task-editing">
     <div></div>
     <input
-      className="task-item__input-task-text"
+      className="task-editing__input-task-text"
       value={task.text}
       onChange={(e) => {
         onChange({
@@ -25,7 +25,7 @@ export const TaskEditing: React.FC<Props> = ({ task, onChange }) => (
       }}
     />
     <button
-      className="task-item__button"
+      className="task-editing__button"
       onClick={() => {
         onChange({ ...task, isEditing: false });
       }}

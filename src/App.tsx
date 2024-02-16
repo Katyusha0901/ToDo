@@ -1,7 +1,7 @@
 import React from "react";
 import { useRef } from "react";
 import { AddTask } from "./AddTask/AddTask";
-import { TaskNotEditing } from "./Task/TaskDisplay";
+import { TaskDisplay } from "./Task/TaskDisplay";
 import { TaskEditing } from "./Task/TaskEditing";
 import { DeleteAllTasks } from "./DeleteAll/DeleteAllTasks";
 import "./App.css";
@@ -52,14 +52,14 @@ export default function App() {
             })
             .map((task) =>
               task.isEditing === false ? (
-                <TaskNotEditing
+                <TaskDisplay
                   key={task.id}
                   task={task}
                   onChange={changeTask}
                   onDelete={deleteTask}
                 />
               ) : (
-                <TaskEditing task={task} onChange={changeTask} />
+                <TaskEditing key={task.id} task={task} onChange={changeTask} />
               )
             )}
         </ul>

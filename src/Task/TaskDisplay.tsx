@@ -8,33 +8,28 @@ interface Props {
   onDelete: (number: number) => void;
 }
 
-export const TaskNotEditing: React.FC<Props> = ({
-  task,
-  onChange,
-  onDelete,
-}) => (
-  <div className="item-content__task-item">
-    <label className="item-content__checkbox">
+export const TaskDisplay: React.FC<Props> = ({ task, onChange, onDelete }) => (
+  <div className="task-display__task-item">
+    <label className="task-display__checkbox">
       <input
-        className="item-content__checkbox-input"
+        className="task-display__checkbox-input"
         type="checkbox"
         checked={task.done}
         onChange={(e) => {
           onChange({ ...task, done: e.target.checked });
         }}
       />
-      <span className="item-content__checkbox-checkmark">✔</span>
+      <span className="task-display__checkbox-checkmark">✔</span>
     </label>
     <p
-      className="item-content__p-task"
+      className="task-display__p-task"
       onClick={() => {
         onChange({ ...task, isEditing: true });
       }}
     >
-      {" "}
-      {task.text}{" "}
+      {task.text}
     </p>
-    <button className="item-content__button" onClick={() => onDelete(task.id)}>
+    <button className="task-display__button" onClick={() => onDelete(task.id)}>
       Delete
     </button>
   </div>

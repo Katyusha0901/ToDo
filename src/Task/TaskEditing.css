@@ -1,4 +1,4 @@
-.task-item {
+.task-editing {
   height: 50px;
   display: grid;
   grid-template-columns: 20px 300px 100px;
@@ -12,7 +12,7 @@
   width: 435px;
 }
 
-.task-item__input-task-text {
+.task-editing__input-task-text {
   height: 50px;
   border: none;
   box-shadow: none;
@@ -25,7 +25,7 @@
   cursor: pointer;
 }
 
-.task-item__button {
+.task-editing__button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,26 +43,26 @@
   cursor: pointer;
 }
 
-.task-item__button:hover {
+.task-editing__button:hover {
   box-shadow: 0 0 5px rgb(111, 110, 110);
 }
 
-.task-item__button:active {
+.task-editing__button:active {
   box-shadow: 0 0 5px rgb(64, 63, 63);
 }
 
 @media screen and (max-width: 437px) {
-  .task-item {
+  .task-editing {
     grid-template-columns: 10vw 50vw 15vw;
 
     width: 90vw;
   }
 
-  .task-item__input-task-text {
+  .task-editing__input-task-text {
     padding-left: 5vw;
   }
 
-  .task-item__button {
+  .task-editing__button {
     margin: 0 3vw 0 0;
     width: 15vw;
     font-size: 4vw;
