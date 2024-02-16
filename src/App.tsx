@@ -51,15 +51,15 @@ export default function App() {
               return b.done === a.done ? 0 : b.done ? -1 : 1;
             })
             .map((task) =>
-              task.isEditing === false ? (
+              task.isEditing ? (
+                <TaskEditing key={task.id} task={task} onChange={changeTask} />
+              ) : (
                 <TaskDisplay
                   key={task.id}
                   task={task}
                   onChange={changeTask}
                   onDelete={deleteTask}
                 />
-              ) : (
-                <TaskEditing key={task.id} task={task} onChange={changeTask} />
               )
             )}
         </ul>
